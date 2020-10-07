@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Listado de Mascotas</title>
+
+    <!-- Template Utilizado para partir de:
+    https://getbootstrap.com/docs/4.5/examples/jumbotron/
+     -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="my-style.css">
+    <link rel="stylesheet" href="lib/jqueryConfirms/dist/jquery-confirm.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Censo Mascotas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Portada.html">Inicio </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Informar-Mascotas.html">Informar
+                    Mascotas</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Lista de Mascotas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Estadisticas.html">Estadísticas</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<main role="main">
+
+    <div class="container">
+        <br>
+        <h1 class="display-5">Listado de Mascotas</h1>
+        <br>
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead class="black white-text">
+            <tr id="fil0">
+                <th scope="col">Fecha de Ingreso</th>
+                <th scope="col">Comuna</th>
+                <th scope="col">Nombre Calle</th>
+                <th scope="col">Nombre Contacto</th>
+                <th scope="col">Total Mascotas</th>
+                <th scope="col">Total Fotos</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="expandable0" id="row1" style="cursor: pointer">
+                <td>04/10/2020</td>
+                <td>Macul</td>
+                <td>El Libano</td>
+                <td>Belén</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr id="row2" class="expandable1" style="cursor: pointer">
+                <td>04/10/2020</td>
+                <td>La Florida</td>
+                <td>Walker Martínez</td>
+                <td>Antonia</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr id="row3" class="expandable2" style="cursor: pointer">
+                <td>04/10/2020</td>
+                <td>Puente Alto</td>
+                <td>Concha y Toro</td>
+                <td>Ignacio</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr id="row4" class="expandable3" style="cursor: pointer">
+                <td>04/10/2020</td>
+                <td>Santiago</td>
+                <td>Bandera</td>
+                <td>José</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr id="row5" class="expandable4" style="cursor: pointer">
+                <td>04/10/2020</td>
+                <td>Estación Central</td>
+                <td>Arica</td>
+                <td>Arturo</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+    <hr>
+
+</main>
+
+<footer class="container">
+    <p> CC-5002 Desarrollo de Aplicaciones Web 2020</p>
+</footer>
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script src="lib/canvasjs.min.js"></script>
+<script src="lib/jqueryConfirms/dist/jquery-confirm.min.js"></script>
+<script type="text/javascript" src="listado-mascotas.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Informar Mascotas</title>
+
+    <!-- Template Utilizado para partir de:
+        https://getbootstrap.com/docs/4.5/examples/jumbotron/
+    -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="lib/jqueryConfirms/dist/jquery-confirm.min.css">
+    <link rel="stylesheet" type="text/css" href="my-style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Censo Mascotas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Portada.html">Inicio </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Informar Mascotas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Listado-Mascotas.html">Lista de
+                    Mascotas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Estadisticas.html">Estadísticas</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<div id="error">Error Mesagge</div>
+
+<main role="main">
+
+    <div class="container">
+        <br>
+        <h1 class="display-5">Informar Mascota</h1>
+        <br>
+    </div>
+
+    <div id="entire-content" class="container">
+        <form method="post" onsubmit="return myValidator()" onreset="eraseError()">
+
+            <div class="form-group">
+                <h3>Domicilio:</h3><br>
+
+                <label for="region" class="title">Región</label>
+                <select class="form-control" name="region" id="region" onchange="addComunas()">
+                    <option value="" selected="selected">Seleccione una opción</option>
+                </select><br>
+
+
+                <label for="comuna">Comuna</label>
+                <select class="form-control" name="comuna" id="comuna">
+                    <option value="" selected="selected">Seleccione una opción</option>
+                </select><br>
+
+                <label for="calle">Nombre Calle</label>
+                <input type="text" class="form-control" name="calle" id="calle"  size="100"
+                       maxlength="250"><br>
+
+                <label for="numero">Número</label>
+                <input type="text" class="form-control" name="numero" id="numero"  size="20"
+                       maxlength="20"><br>
+
+                <label for="sector">Sector</label>
+                <input type="text" class="form-control" name="sector" id="sector" size="100" maxlength="100"><br>
+
+            </div>
+
+            <div class="form-group">
+
+                <h3>Datos de Contacto:</h3><br>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre"
+                       size="100" maxlength="200"><br>
+
+                <label for="email">Email</label>
+                <input type="text" class="form-control" name="email" id="email"  size="100"><br>
+
+                <label for="celular">Número de Celular</label>
+                <input type="text" class="form-control" name="celular" id="celular" size="15" maxlength="100"><br>
+
+            </div>
+
+
+            <div class="form-group" >
+
+                <h3>Información de Mascota:</h3><br>
+
+                <label for="tipo-mascota">Tipo</label>
+                <select class="form-control" name="tipo-mascota" id="tipo-mascota"
+                        onchange="addOther(1)">
+                    <option value="" selected="selected">Seleccione una opción</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="pez">Pez</option>
+                    <option value="tortuga">Tortuga</option>
+                    <option value="hamster">Hámster</option>
+                    <option value="loro">Loro</option>
+                    <option value="iguana">Iguana</option>
+                    <option value="araña">Araña</option>
+                    <option value="otro">Otro</option>
+
+                </select><br>
+
+                <div id="other-container"></div>
+
+                <label for="edad-mascota">Edad en Años</label>
+                <input type="text" class="form-control" name="edad-mascota" id="edad-mascota"
+                       size="5" maxlength="5"><br>
+
+                <label for="color-mascota">Color</label>
+                <input type="text" class="form-control" name="color-mascota" id="color-mascota"
+                       size="30" maxlength="30"><br>
+
+                <label for="raza-mascota">Raza</label>
+                <input type="text" class="form-control" name="raza-mascota" id="raza-mascota"
+                       size="30" maxlength="30"><br>
+
+                <label for="esterilizado-mascota">Esterilizado</label>
+                <select class="form-control" name="esterilizado-mascota" id="esterilizado-mascota" >
+                    <option value="" selected="selected">Seleccione una opción</option>
+                    <option value="1">Sí</option>
+                    <option value="2">No</option>
+                    <option value="3">No Aplica</option>
+                </select><br>
+
+                <label for="vacunas-mascota">Vacunas al día</label>
+                <select class="form-control" name="vacunas-mascota" id="vacunas-mascota" >
+                    <option value="" selected="selected">Seleccione una opción</option>
+                    <option value="1">Sí</option>
+                    <option value="2">No</option>
+                    <option value="3">No Aplica</option>
+                </select><br>
+
+                <div id="file-input-container">
+                    <div class="custom-file" style="width: 80% !important">
+                        <label for="foto-mascota">Seleccionar Foto</label>
+                        <input type="file" class="form-control-file" name="foto-mascota" id="foto-mascota"
+                                accept="image/jpeg">
+                    </div>
+
+                    <button id="add-photo" class="btn btn-secondary" onclick="addFile(1)">Agregar Foto</button>
+                </div>
+
+            </div>
+
+            <div class="form-group" id="mascot-section-container-2"></div>
+
+            <div class="buttons" >
+
+                <button type="button" id="add-mascot" class="btn btn-info" onclick="addMascot()">
+                    Informar otra Mascota en este Domicilio
+                </button>
+
+            </div><br>
+
+            <div class="buttons" style="text-align: center">
+
+                <button class="btn btn-primary mysub" id="submitForm">Enviar Información de este domicilio
+                </button>
+                <button id="resetForm" type="reset" class="btn btn-warning">Borrar</button>
+
+            </div>
+
+        </form>
+
+    </div><br>
+    <hr>
+</main>
+
+
+<footer class="container">
+    <p> CC-5002 Desarrollo de Aplicaciones Web 2020</p>
+</footer>
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script src="lib/canvasjs.min.js"></script>
+<script src="lib/jqueryConfirms/dist/jquery-confirm.min.js"></script>
+<script type="text/javascript" src="validator.js"></script>
+</body>
+
+</html>

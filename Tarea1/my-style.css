@@ -1,0 +1,39 @@
+.lineChart{
+    height: 300px;
+    width: 100%;
+}
+
+.pieChart{
+    height: 300px;
+    width: 100%;
+}
+
+.barChart{
+    height: 370px;
+    max-width: 780px;
+    margin: 0px auto;
+    align-content: center
+}
+
+.buttonHome{
+    text-align: center
+}
+
+.expandable0 .expandable1 .expandable2 .expandable3 .expandable4 {
+    cursor: pointer;
+}
+
+#error {
+    background-color: #f38d8d;
+    display: none;
+    font-size: 20px;
+    left: 0;
+    z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    position: sticky;
+    text-align: center;
+    width: 100%;
+    opacity: 0.9;
+    top:0;
+}

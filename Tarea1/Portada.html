@@ -1,10 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portada</title>
+
+    <!-- Template Utilizado para partir de:
+    https://getbootstrap.com/docs/4.5/examples/jumbotron/
+     -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="my-style.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Censo Mascotas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Informar-Mascotas.html">Informar Mascotas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Listado-Mascotas.html">Lista de Mascotas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Estadisticas.html">Estadísticas</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="background-color: #eeeeee">
+        <div class="container">
+            <h1 class="display-3">¡Bienvenid@!</h1>
+            <p>Recuerda adopta y no compres</p>
+            <p><a class="btn btn-primary btn-lg"
+                  href="http://anakena.dcc.uchile.cl/~idiaz/Tarea1/Informar-Mascotas.html"
+                  role="button">Informar Mis Mascotas &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <h1 class="display-5">Últimas Mascotas Censadas</h1>
+        <table class="table">
+            <thead class="black white-text">
+            <tr>
+                <th scope="col">Comuna</th>
+                <th scope="col">Calle</th>
+                <th scope="col">Tipo/Cantidad</th>
+                <th scope="col">Foto</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Macul</th>
+                <td>El Libano</td>
+                <td>Perros: 1</td>
+                <td>
+                    <img src="./img/dog1.jpg" alt="perrito" width="160" height="120">
+                    <!-- Photo by Trisha Shears from FreeImages -->
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">La Florida</th>
+                <td>Walker Martínez</td>
+                <td>Gatos: 1</td>
+                <td>
+                    <img src="./img/cat1.jpg" alt="gatito" width="160" height="120">
+                    <!-- Photo by Patataj Patataj from FreeImages -->
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Puente Alto</th>
+                <td>Concha y Toro</td>
+                <td>Tortugas: 1</td>
+                <td>
+                    <img src="./img/turtle1.jpg" alt="tortuguita" width="160" height="120">
+                    <!-- Photo by Gerla Brakkee from FreeImages -->
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Santiago</th>
+                <td>Bandera</td>
+                <td>Arañas: 1</td>
+                <td>
+                    <img src="./img/spider1.jpg" alt="arañita" width="160" height="120">
+                    <!-- Photo by Ariel Camilo from FreeImages -->
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Estación Central</th>
+                <td>Arica</td>
+                <td>Hámster: 1</td>
+                <td>
+                    <img src="./img/hamster1.jpg" alt="ratita" width="160" height="120">
+                    <!-- Photo by Lisandra Barros Mendonça from FreeImages -->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <br><hr>
+
+    </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p> CC-5002 Desarrollo de Aplicaciones Web 2020</p>
+</footer>
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
 </body>
 </html>
