@@ -42,6 +42,16 @@ function addComunas() {
     }
 }
 
+/**
+ * Erase error message
+ */
+function eraseError() {
+
+    let container = document.getElementById('error');
+    container.style.display = 'none';
+
+}
+
 /** @type {number}*/ let numberOfMascots = 1;
 let addedMascots = [];
 
@@ -389,7 +399,7 @@ function myValidator() {
 
         return false;
     }
-
+    eraseError();
     return true;
 }
 
@@ -438,15 +448,7 @@ function showError(message) {
     container.style.fontWeight = '800';
 }
 
-/**
- * Erase error message
- */
-function eraseError() {
 
-    let container = document.getElementById('error');
-    container.style.display = 'none';
-
-}
 
 
 let otherExist = [false];
